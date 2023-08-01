@@ -21,4 +21,20 @@
   padding: 10px;
 }
 
+.restorantlist {
+  flex-wrap: wrap;
+  display: flex;
+}
+
+.card {
+  border: 1.5px solid #000;
+  width: 200px;
+  margin: 5px;
+  padding: 10px;
+}
+
+.card img {
+  width: 100%;
+}
+
 /*# sourceMappingURL=index.9e4c6fd2.css.map */

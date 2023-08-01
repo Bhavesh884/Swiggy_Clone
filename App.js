@@ -12,7 +12,7 @@ const Title = () => (
   </a>
 );
 
-const Heading1 = () => {
+const Header = () => {
   return (
     <div className="header">
       <Title />
@@ -27,6 +27,38 @@ const Heading1 = () => {
     </div>
   );
 };
+const RestorentCard = () => (
+  <div className="card">
+    <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/hmyktxkas3auvpsl728b" />
+    <h2>Burger Singh</h2>
+    <h3>Burgers, Snacks</h3>
+    <h4>3.7 stars</h4>
+  </div>
+);
+const Body = () => (
+  <div className="restorantlist">
+    <RestorentCard />
+    <RestorentCard />
+    <RestorentCard />
+    <RestorentCard />
+    <RestorentCard />
+    <RestorentCard />
+    <RestorentCard />
+    <RestorentCard />
+    <RestorentCard />
+    <RestorentCard />
+    <RestorentCard />
+    <RestorentCard />
+  </div>
+);
+const AppLayout = () => (
+  <>
+    <>
+      <Header></Header>
+      <Body />
+    </>
+  </>
+);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<Heading1 />);
+root.render(<AppLayout />);

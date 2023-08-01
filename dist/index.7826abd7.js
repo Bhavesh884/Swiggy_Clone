@@ -2965,7 +2965,7 @@ const Title = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
         columnNumber: 21
     }, undefined);
 _c = Title;
-const Heading1 = ()=>{
+const Header = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "header",
         children: [
@@ -3024,16 +3024,144 @@ const Heading1 = ()=>{
         columnNumber: 10
     }, undefined);
 };
-_c1 = Heading1;
+_c1 = Header;
+const RestorentCard = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "card",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                src: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/hmyktxkas3auvpsl728b"
+            }, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 21,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                children: "Burger Singh"
+            }, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 22,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                children: "Burgers, Snacks"
+            }, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 23,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
+                children: "3.7 stars"
+            }, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 24,
+                columnNumber: 5
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "App.js",
+        lineNumber: 20,
+        columnNumber: 29
+    }, undefined);
+_c2 = RestorentCard;
+const Body = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "restorantlist",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestorentCard, {}, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 27,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestorentCard, {}, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 28,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestorentCard, {}, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 29,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestorentCard, {}, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 30,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestorentCard, {}, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 31,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestorentCard, {}, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 32,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestorentCard, {}, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 33,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestorentCard, {}, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 34,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestorentCard, {}, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 35,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestorentCard, {}, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 36,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestorentCard, {}, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 37,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestorentCard, {}, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 38,
+                columnNumber: 5
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "App.js",
+        lineNumber: 26,
+        columnNumber: 20
+    }, undefined);
+_c3 = Body;
+const AppLayout = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Header, {}, void 0, false, {
+                    fileName: "App.js",
+                    lineNumber: 42,
+                    columnNumber: 7
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Body, {}, void 0, false, {
+                    fileName: "App.js",
+                    lineNumber: 43,
+                    columnNumber: 7
+                }, undefined)
+            ]
+        }, void 0, true)
+    }, void 0, false);
+_c4 = AppLayout;
 const root = (0, _clientDefault.default).createRoot(document.getElementById("root"));
-root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Heading1, {}, void 0, false, {
+root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(AppLayout, {}, void 0, false, {
     fileName: "App.js",
-    lineNumber: 21,
+    lineNumber: 47,
     columnNumber: 13
 }, undefined));
-var _c, _c1;
+var _c, _c1, _c2, _c3, _c4;
 $RefreshReg$(_c, "Title");
-$RefreshReg$(_c1, "Heading1");
+$RefreshReg$(_c1, "Header");
+$RefreshReg$(_c2, "RestorentCard");
+$RefreshReg$(_c3, "Body");
+$RefreshReg$(_c4, "AppLayout");
 
   $parcel$ReactRefreshHelpers$c1db.postlude(module);
 } finally {
