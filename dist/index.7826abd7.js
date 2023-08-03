@@ -3025,135 +3025,217 @@ const Header = ()=>{
     }, undefined);
 };
 _c1 = Header;
-const RestorentCard = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+const restaurantlist = [
+    {
+        data: {
+            id: 1,
+            name: "Burger Singh",
+            cuisine: [
+                "Burgers, Snacks"
+            ],
+            rating: 3.7,
+            image: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/hmyktxkas3auvpsl728b"
+        }
+    },
+    {
+        data: {
+            id: 2,
+            name: "Manohar Dairy & Restaurant",
+            cuisine: [
+                "Sweets",
+                "Deserts",
+                "Snacks"
+            ],
+            rating: 4.3,
+            image: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/yhnrql8wxgu8sgqjczos"
+        }
+    },
+    {
+        data: {
+            id: 3,
+            name: "Mahadev Bhojnalaya",
+            cuisine: [
+                "North Indian",
+                "South Indian",
+                "Chinese",
+                "Fast Food"
+            ],
+            rating: 3.8,
+            image: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/aipwx1svepzdvsreuszq"
+        }
+    },
+    {
+        data: {
+            id: 4,
+            name: "Rajhans Restaurant",
+            cuisine: [
+                "North Indian",
+                "South Indian",
+                "Chinese",
+                "Fast Food"
+            ],
+            rating: 3.7,
+            image: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/hmyktxkas3auvpsl728b"
+        }
+    },
+    {
+        data: {
+            id: 5,
+            name: "Rotiwala-Bhopal",
+            cuisine: [
+                "North Indian",
+                "South Indian",
+                "Chinese",
+                "Fast Food"
+            ],
+            rating: 3.9,
+            image: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/brteodziq28wckphkg4f"
+        }
+    },
+    {
+        data: {
+            id: 6,
+            name: "Burger Singh",
+            cuisine: [
+                "Burgers, Snacks"
+            ],
+            rating: 3.7,
+            image: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/hmyktxkas3auvpsl728b"
+        }
+    },
+    {
+        data: {
+            id: 7,
+            name: "Manohar Dairy & Restaurant",
+            cuisine: [
+                "Sweets",
+                "Deserts",
+                "Snacks"
+            ],
+            rating: 4.3,
+            image: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/yhnrql8wxgu8sgqjczos"
+        }
+    },
+    {
+        data: {
+            id: 8,
+            name: "Mahadev Bhojnalaya",
+            cuisine: [
+                "North Indian",
+                "South Indian",
+                "Chinese",
+                "Fast Food"
+            ],
+            rating: 3.8,
+            image: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/aipwx1svepzdvsreuszq"
+        }
+    },
+    {
+        data: {
+            id: 9,
+            name: "Rajhans Restaurant",
+            cuisine: [
+                "North Indian",
+                "South Indian",
+                "Chinese",
+                "Fast Food"
+            ],
+            rating: 3.7,
+            image: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/hmyktxkas3auvpsl728b"
+        }
+    },
+    {
+        data: {
+            id: 10,
+            name: "Rotiwala-Bhopal",
+            cuisine: [
+                "North Indian",
+                "South Indian",
+                "Chinese",
+                "Fast Food"
+            ],
+            rating: 3.9,
+            image: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/brteodziq28wckphkg4f"
+        }
+    }
+];
+const RestorentCard = ({ name, image, rating, cuisine })=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "card",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                src: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/hmyktxkas3auvpsl728b"
+                src: image
             }, void 0, false, {
                 fileName: "App.js",
-                lineNumber: 21,
+                lineNumber: 107,
                 columnNumber: 5
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                children: "Burger Singh"
+                children: name
             }, void 0, false, {
                 fileName: "App.js",
-                lineNumber: 22,
+                lineNumber: 108,
                 columnNumber: 5
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
-                children: "Burgers, Snacks"
+                children: cuisine.join(",")
             }, void 0, false, {
                 fileName: "App.js",
-                lineNumber: 23,
+                lineNumber: 109,
                 columnNumber: 5
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
-                children: "3.7 stars"
+                children: rating + "stars"
             }, void 0, false, {
                 fileName: "App.js",
-                lineNumber: 24,
+                lineNumber: 110,
                 columnNumber: 5
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "App.js",
-        lineNumber: 20,
-        columnNumber: 29
+        lineNumber: 106,
+        columnNumber: 7
     }, undefined);
 _c2 = RestorentCard;
 const Body = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "restorantlist",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestorentCard, {}, void 0, false, {
-                fileName: "App.js",
-                lineNumber: 27,
-                columnNumber: 5
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestorentCard, {}, void 0, false, {
-                fileName: "App.js",
-                lineNumber: 28,
-                columnNumber: 5
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestorentCard, {}, void 0, false, {
-                fileName: "App.js",
-                lineNumber: 29,
-                columnNumber: 5
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestorentCard, {}, void 0, false, {
-                fileName: "App.js",
-                lineNumber: 30,
-                columnNumber: 5
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestorentCard, {}, void 0, false, {
-                fileName: "App.js",
-                lineNumber: 31,
-                columnNumber: 5
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestorentCard, {}, void 0, false, {
-                fileName: "App.js",
-                lineNumber: 32,
-                columnNumber: 5
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestorentCard, {}, void 0, false, {
-                fileName: "App.js",
-                lineNumber: 33,
-                columnNumber: 5
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestorentCard, {}, void 0, false, {
-                fileName: "App.js",
-                lineNumber: 34,
-                columnNumber: 5
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestorentCard, {}, void 0, false, {
-                fileName: "App.js",
-                lineNumber: 35,
-                columnNumber: 5
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestorentCard, {}, void 0, false, {
-                fileName: "App.js",
-                lineNumber: 36,
-                columnNumber: 5
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestorentCard, {}, void 0, false, {
-                fileName: "App.js",
-                lineNumber: 37,
-                columnNumber: 5
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestorentCard, {}, void 0, false, {
-                fileName: "App.js",
-                lineNumber: 38,
-                columnNumber: 5
-            }, undefined)
-        ]
-    }, void 0, true, {
+        className: "restorant-list",
+        children: restaurantlist.map((res, index)=>{
+            return /*#__PURE__*/ (0, _react.createElement)(RestorentCard, {
+                ...res.data,
+                key: res.data.id,
+                __source: {
+                    fileName: "App.js",
+                    lineNumber: 114,
+                    columnNumber: 12
+                },
+                __self: undefined
+            });
+        })
+    }, void 0, false, {
         fileName: "App.js",
-        lineNumber: 26,
+        lineNumber: 112,
         columnNumber: 20
     }, undefined);
 _c3 = Body;
 const AppLayout = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
-            children: [
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Header, {}, void 0, false, {
-                    fileName: "App.js",
-                    lineNumber: 42,
-                    columnNumber: 7
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Body, {}, void 0, false, {
-                    fileName: "App.js",
-                    lineNumber: 43,
-                    columnNumber: 7
-                }, undefined)
-            ]
-        }, void 0, true)
-    }, void 0, false);
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Header, {}, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 118,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Body, {}, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 119,
+                columnNumber: 5
+            }, undefined)
+        ]
+    }, void 0, true);
 _c4 = AppLayout;
 const root = (0, _clientDefault.default).createRoot(document.getElementById("root"));
 root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(AppLayout, {}, void 0, false, {
     fileName: "App.js",
-    lineNumber: 47,
+    lineNumber: 122,
     columnNumber: 13
 }, undefined));
 var _c, _c1, _c2, _c3, _c4;
