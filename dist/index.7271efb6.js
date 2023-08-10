@@ -27455,6 +27455,9 @@ exports.default = Body = _s(()=>{
     //   let searchtext = "xyz";
     const [searchtext, setsearchtext] = (0, _react.useState)("");
     const [restaurants, setrestaurants] = (0, _react.useState)((0, _constantsJs.restaurantlist));
+    (0, _react.useEffect)(()=>{
+    //API call....
+    }, []);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27470,7 +27473,7 @@ exports.default = Body = _s(()=>{
                         }
                     }, void 0, false, {
                         fileName: "src/components/Body.jsx",
-                        lineNumber: 14,
+                        lineNumber: 17,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -27482,13 +27485,13 @@ exports.default = Body = _s(()=>{
                         children: "Search"
                     }, void 0, false, {
                         fileName: "src/components/Body.jsx",
-                        lineNumber: 17,
+                        lineNumber: 20,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/Body.jsx",
-                lineNumber: 13,
+                lineNumber: 16,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27499,7 +27502,7 @@ exports.default = Body = _s(()=>{
                         key: res.data.id,
                         __source: {
                             fileName: "src/components/Body.jsx",
-                            lineNumber: 26,
+                            lineNumber: 29,
                             columnNumber: 16
                         },
                         __self: undefined
@@ -27507,12 +27510,12 @@ exports.default = Body = _s(()=>{
                 })
             }, void 0, false, {
                 fileName: "src/components/Body.jsx",
-                lineNumber: 24,
+                lineNumber: 27,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true);
-}, "EVpy2AgpNOvH6KPl18a6cInFGhc=");
+}, "YmxZfh0SbxiLlctdF68or4HYif4=");
 
   $parcel$ReactRefreshHelpers$9ffe.postlude(module);
 } finally {
