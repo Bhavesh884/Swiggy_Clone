@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import RestorentCard from "./RestorentCard";
 import { restaurantlist } from "../constants.js";
 
@@ -13,6 +13,9 @@ export default Body = () => {
   //   let searchtext = "xyz";
   const [searchtext, setsearchtext] = useState("");
   const [restaurants, setrestaurants] = useState(restaurantlist);
+  useEffect(() => {
+    //API call....
+  }, []);
   return (
     <>
       <div className="search-container">
