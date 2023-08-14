@@ -1,8 +1,13 @@
-export default RestorentCard = ({ name, image, rating, cuisine }) => (
-    <div className="card">
-      <img src={image}></img>
-      <h2>{name}</h2>
-      <h3>{cuisine.join(",")}</h3>
-      <h4>{rating + "stars"}</h4>
-    </div>
-  );
+export default RestorentCard = ({ info }) => (
+  <div className="card">
+    <img
+      src={
+        "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/" +
+        info?.cloudinaryImageId
+      }
+    ></img>
+    <h2>{info?.name}</h2>
+    <h3>{info?.cuisines.join(", ")}</h3>
+    <h4>{info?.locality}</h4>
+  </div>
+);
