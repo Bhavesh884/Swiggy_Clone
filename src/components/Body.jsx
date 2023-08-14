@@ -5,15 +5,16 @@ import Shimmer from "./Shimmer";
 
 function filterData(restaurants, searchtext) {
   const filterData = restaurants.filter((restaurent) =>
-    restaurent?.info?.name.includes(searchtext)
+    restaurent?.info?.name?.toLowerCase()?.includes(searchtext?.toLowerCase())
   );
   return filterData;
 }
 
 export default Body = () => {
-  //   let searchtext = "xyz";
+  const [allRestaurants, setAllRestaurants] = useState([]);
   const [searchtext, setsearchtext] = useState("");
-  const [restaurants, setrestaurants] = useState([]);
+  const [filteredrestaurants, setFilteredrestaurants] = useState([]);
+
   useEffect(() => {
     //API call....
     getRestaurants();
@@ -26,11 +27,19 @@ export default Body = () => {
     );
     const json = await data.json();
     // console.log(json);
-    setrestaurants(
+    setAllRestaurants(
+      json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+    );
+    setFilteredrestaurants(
       json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
   }
-  return restaurants.length === 0 ? (
+
+  if (!allRestaurants) return null;
+  if (filteredrestaurants.length === 0)
+    return <h1>No matching Restaurent found</h1>;
+
+  return allRestaurants.length === 0 ? (
     <Shimmer />
   ) : (
     <>
@@ -47,15 +56,15 @@ export default Body = () => {
         <button
           className="search-btn"
           onClick={() => {
-            const data = filterData(restaurants, searchtext);
-            setrestaurants(data);
+            const data = filterData(allRestaurants, searchtext);
+            setFilteredrestaurants(data);
           }}
         >
           Search
         </button>
       </div>
       <div className="restorant-list">
-        {restaurants.map((res) => {
+        {filteredrestaurants.map((res) => {
           return <RestorentCard {...res} key={res?.info?.id} />;
           // return <RestorentCard {...res.data} key={index} />;
         })}
