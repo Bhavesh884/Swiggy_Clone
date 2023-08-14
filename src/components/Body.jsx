@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
 import RestorentCard from "./RestorentCard";
-import { restaurantlist } from "../constants.js";
+// import { restaurantlist } from "../constants.js";
+import Shimmer from "./Shimmer";
 
 function filterData(restaurants, searchtext) {
   const filterData = restaurants.filter((restaurent) =>
-    restaurent.data.name.includes(searchtext)
+    restaurent?.info?.name.includes(searchtext)
   );
   return filterData;
 }
@@ -12,7 +13,7 @@ function filterData(restaurants, searchtext) {
 export default Body = () => {
   //   let searchtext = "xyz";
   const [searchtext, setsearchtext] = useState("");
-  const [restaurants, setrestaurants] = useState(restaurantlist);
+  const [restaurants, setrestaurants] = useState([]);
   useEffect(() => {
     //API call....
     getRestaurants();
@@ -24,15 +25,14 @@ export default Body = () => {
       // "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.9351929&lng=77.62448069999999&restaurantId=10584&submitAction=ENTER"
     );
     const json = await data.json();
-    console.log(json);
+    // console.log(json);
     setrestaurants(
       json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
-    console.log(
-      json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle.restaurants
-    );
   }
-  return (
+  return restaurants.length === 0 ? (
+    <Shimmer />
+  ) : (
     <>
       <div className="search-container">
         <input
