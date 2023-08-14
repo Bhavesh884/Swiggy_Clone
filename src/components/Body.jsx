@@ -36,8 +36,8 @@ export default Body = () => {
   }
 
   if (!allRestaurants) return null;
-  if (filteredrestaurants.length === 0)
-    return <h1>No matching Restaurent found</h1>;
+  // if (filteredrestaurants.length === 0)
+  //   return <h1>No matching Restaurent found</h1>;
 
   return allRestaurants.length === 0 ? (
     <Shimmer />

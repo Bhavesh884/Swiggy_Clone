@@ -29,10 +29,12 @@
   margin: 5px;
   font-size: 1.1vw;
   font-weight: 400;
+  border-radius: 10px;
 }
 .card img {
   width: 100%;
   height: 50%;
+  border-radius: 10px 10px 0px 0px;
 }
 .card h2 {
   font-size: 1.3vw;
@@ -51,4 +53,37 @@
   margin-top: 10px;
   font-size: 1.1vw;
   font-weight: 700;
+}
+.shimmer-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 2.5%;
+}
+.shimmer-card {
+  width: 220px;
+  height: 250px;
+  margin: 15px;
+  border-radius: 10px;
+  border: 2px solid rgb(148, 148, 148);
+}
+.shimmer-img {
+  width: 90%;
+  height: 50%;
+  margin: 10px;
+  background-color: rgb(148, 148, 148);
+  border-radius: 10px 10px 0px 0px;
+}
+.shimmer-h2 {
+  width: 90%;
+  height: 10%;
+  margin: 10px;
+  background-color: rgb(148, 148, 148);
+  border-radius: 10px;
+}
+.shimmer-h3 {
+  width: 90%;
+  height: 10%;
+  margin: 10px;
+  background-color: rgb(148, 148, 148);
+  border-radius: 10px;
 }

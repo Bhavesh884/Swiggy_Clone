@@ -1,9 +1,15 @@
 const Shimmer = () => {
   return (
-    <div className="shimmer-wrapper">
-      Export Shimmer UI........
-      <h1>Loading your Data</h1>
-      <h3>if taking longer than usual , refresh the page</h3>
+    <div className="shimmer-list">
+      {Array(15)
+        .fill("")
+        .map((e, index) => (
+          <div key={index} className="shimmer-card">
+            <div className="shimmer-img"></div>
+            <div className="shimmer-h2"></div>
+            <div className="shimmer-h3"></div>
+          </div>
+        ))}
     </div>
   );
 };
