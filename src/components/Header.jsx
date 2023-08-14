@@ -1,13 +1,13 @@
 import { useState } from "react";
-
+import { Link } from "react-router-dom";
 const Title = () => (
-  <a href="/">
+  <Link to={"/"}>
     <img
       className="logoimg"
       alt="logo"
       src="https://images.yourstory.com/cs/2/220356402d6d11e9aa979329348d4c3e/swiggypng-1586771832047.png?fm=png&auto=format"
     />
-  </a>
+  </Link>
 );
 
 const Header = () => {
@@ -17,8 +17,14 @@ const Header = () => {
       <Title />
       <div className="navitems">
         <ul>
-          <li>Home</li>
-          <li>About</li>
+          <li>
+            <Link to={"/"}>Home </Link>
+          </li>
+
+          <li>
+            <Link to="/about">About </Link>
+          </li>
+
           <li>Contact</li>
           <li>Cart</li>
         </ul>

@@ -77,13 +77,19 @@
   width: 90%;
   height: 10%;
   margin: 10px;
-  background-color: rgb(148, 148, 148);
+  background-color: rgb(205, 205, 205);
   border-radius: 10px;
 }
 .shimmer-h3 {
   width: 90%;
   height: 10%;
   margin: 10px;
-  background-color: rgb(148, 148, 148);
+  background-color: rgb(205, 205, 205);
   border-radius: 10px;
+}
+.errorimg {
+  position: absolute;
+  width: 98%;
+  height: 97%;
+  overflow: hidden;
 }
