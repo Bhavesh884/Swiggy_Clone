@@ -65,6 +65,7 @@ export default Body = () => {
         </button>
       </div>
       <div className="restorant-list">
+        {allRestaurants.length === 0 ? window.location.reload() : null}
         {filteredrestaurants.map((res) => {
           return (
             <Link to={"/restaurants/" + res?.info?.id} key={res?.info?.id}>

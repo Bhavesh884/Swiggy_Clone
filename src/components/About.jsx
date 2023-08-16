@@ -1,3 +1,5 @@
+import { Outlet } from "react-router-dom";
+
 const About = () => {
   return (
     <>
@@ -10,6 +12,7 @@ const About = () => {
         autem quasi! Quaerat, enim adipisci. Dolor ipsum vel quod, veniam
         reprehenderit necessitatibus explicabo odit!
       </p>
+      <Outlet />
     </>
   );
 };
