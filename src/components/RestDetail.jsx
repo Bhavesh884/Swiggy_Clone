@@ -1,40 +1,12 @@
-import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { IMG_CDN } from "../constants";
 import Shimmer from "./Shimmer";
 import "../../index.css";
+import useRestaurant from "../utils/useRestaurant";
 
 const RestDetail = () => {
-  const params = useParams();
-  const { id } = params;
-  const [menuList, setMenuList] = useState([]); // [ {name: "Biryani", price: 200}, {name: "Biryani", price: 200}
-  const [restaurant, setRestaurant] = useState(null);
-
-  useEffect(() => {
-    getRestInfo();
-  }, []);
-
-  async function getRestInfo() {
-    const data = await fetch(
-      `https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.9715987&lng=77.5945627&restaurantId=${id}&catalog_qa=undefined&submitAction=ENTER`
-    );
-    const json = await data.json();
-    console.log(json?.data);
-    setRestaurant(json?.data?.cards[0]?.card?.card?.info);
-
-    const data1 = await fetch(
-      `https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.9715987&lng=77.5945627&restaurantId=${id}&catalog_qa=undefined&submitAction=ENTER`
-    );
-    const json1 = await data1.json();
-    console.log(
-      json1?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card
-        ?.card?.itemCards
-    );
-    setMenuList(
-      json1?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card
-        ?.card?.itemCards
-    );
-  }
+  const { id } = useParams();
+  const { restaurant, menuList } = useRestaurant(id);
 
   return !restaurant ? (
     <Shimmer />
