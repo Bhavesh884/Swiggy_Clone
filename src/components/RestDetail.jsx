@@ -3,11 +3,21 @@ import { IMG_CDN } from "../constants";
 import Shimmer from "./Shimmer";
 import "../../index.css";
 import useRestaurant from "../utils/useRestaurant";
+import useOnline from "../utils/useOnline";
 
 const RestDetail = () => {
   const { id } = useParams();
   const { restaurant, menuList } = useRestaurant(id);
 
+  const isOnline = useOnline();
+  if (!isOnline) {
+    return (
+      <>
+        <h1>Hey! Something seems wrong with your internet</h1>
+        <h2>Please check your Internet Connection</h2>{" "}
+      </>
+    );
+  }
   return !restaurant ? (
     <Shimmer />
   ) : (
