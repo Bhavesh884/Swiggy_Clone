@@ -4,15 +4,15 @@ import "../index.css";
 import Header from "./components/Header";
 import Body from "./components/Body";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
-import About from "./components/About";
 import Error from "./components/Error";
-import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import RestDetail from "./components/RestDetail";
 import Profile from "./components/Profile.jsx";
 import Shimmer from "./components/Shimmer";
 
 const InstaMart = lazy(() => import("./components/InstaMart"));
+const About = lazy(() => import("./components/About"));
+const Contact = lazy(() => import("./components/Contact"));
 const AppLayout = () => (
   <>
     <Header />
@@ -31,15 +31,18 @@ const appRouter = createBrowserRouter([
         path: "/",
         element: (
           <Suspense>
-            {" "}
-            <Body />{" "}
+            <Body />
           </Suspense>
         ),
         errorElement: <Error />,
       },
       {
         path: "/about",
-        element: <About />,
+        element: (
+          <Suspense fallback={<Shimmer />}>
+            <About />
+          </Suspense>
+        ),
         errorElement: <Error />,
         children: [
           {
@@ -51,7 +54,11 @@ const appRouter = createBrowserRouter([
       },
       {
         path: "/contact",
-        element: <Contact />,
+        element: (
+          <Suspense fallback={<Shimmer />}>
+            <Contact />
+          </Suspense>
+        ),
         errorElement: <Error />,
       },
       {

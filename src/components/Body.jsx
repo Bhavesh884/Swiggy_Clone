@@ -15,7 +15,7 @@ export default Body = () => {
     return (
       <>
         <h1>Hey! Something seems wrong with your internet</h1>
-        <h2>Please check your Internet Connection</h2>{" "}
+        <h2>Please check your Internet Connection</h2>
       </>
     );
   }
