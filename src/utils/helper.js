@@ -4,3 +4,9 @@ export function filterData(restaurants, searchtext) {
   );
   return filterData;
 }
+export function filterMenu(menuList, searchtext) {
+  const filterData = menuList.filter((menu) =>
+    menu?.card?.info?.name?.toLowerCase()?.includes(searchtext?.toLowerCase())
+  );
+  return filterData;
+}

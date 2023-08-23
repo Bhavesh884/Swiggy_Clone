@@ -1,15 +1,17 @@
+import { useState } from "react";
 import { useParams } from "react-router-dom";
 import { IMG_CDN } from "../constants";
 import Shimmer from "./Shimmer";
 import "../../index.css";
 import useRestaurant from "../utils/useRestaurant";
 import useOnline from "../utils/useOnline";
+import { filterMenu } from "../utils/helper";
 
 const RestDetail = () => {
   const { id } = useParams();
-  const { restaurant, menuList } = useRestaurant(id);
-
+  const { restaurant, menuList, setMenuList, allMenuList } = useRestaurant(id);
   const isOnline = useOnline();
+  const [searchtext, setsearchtext] = useState("");
   if (!isOnline) {
     return (
       <>
@@ -42,6 +44,19 @@ const RestDetail = () => {
       </div>
       <div className="flex flex-wrap-reverse justify-between relative">
         <div className="bg-pink-50 rounded-3xl shadow-lg p-4 mx-5 w-2/3 h-[500px] overflow-auto scroll-smooth">
+          <input
+            className="ml-[38%] shadow-xl rounded-full p-2.5 w-56 text-sm my-2 focus:bg-yellow-50"
+            type="text"
+            value={searchtext}
+            placeholder="search your favourite food here..."
+            onChange={(e) => {
+              setsearchtext(e.target.value);
+              let data;
+              if (e.target.value === "") data = allMenuList;
+              else data = filterMenu(allMenuList, searchtext);
+              setMenuList(data);
+            }}
+          />
           <ul className="flex flex-wrap items-center justify-between">
             {menuList ? (
               menuList.map((item) => {

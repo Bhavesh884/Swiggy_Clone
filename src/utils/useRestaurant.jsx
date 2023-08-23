@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 const useRestaurant = (resId) => {
+  const [allMenuList, setAllMenuList] = useState([]);
   const [menuList, setMenuList] = useState([]);
   const [restaurant, setRestaurant] = useState(null);
 
@@ -17,8 +18,12 @@ const useRestaurant = (resId) => {
       json?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card
         ?.card?.itemCards
     );
+    setAllMenuList(
+      json?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card
+        ?.card?.itemCards
+    );
   }
-  const allData = { menuList, restaurant };
+  const allData = { menuList, restaurant, setMenuList, allMenuList };
   return allData;
 };
 export default useRestaurant;

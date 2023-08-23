@@ -10,7 +10,7 @@ const Section = ({ title, detail, isVisible, setIsVisible }) => {
             <button
               className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-32 my-2"
               onClick={() => {
-                setIsVisible(false);
+                setIsVisible();
               }}
             >
               Read Less
@@ -21,7 +21,7 @@ const Section = ({ title, detail, isVisible, setIsVisible }) => {
           <button
             className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-32 my-2"
             onClick={() => {
-              setIsVisible(true);
+              setIsVisible();
             }}
           >
             Read More

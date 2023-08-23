@@ -1,4 +1,4 @@
-import React, { lazy, Suspense } from "react";
+import React, { lazy, Suspense, useState } from "react";
 import ReactDOM from "react-dom/client";
 import "../index.css";
 import Header from "./components/Header";
@@ -9,17 +9,25 @@ import Footer from "./components/Footer";
 import RestDetail from "./components/RestDetail";
 import Profile from "./components/Profile.jsx";
 import Shimmer from "./components/Shimmer";
+import UserContext from "./utils/UserContext";
 
 const InstaMart = lazy(() => import("./components/InstaMart"));
 const About = lazy(() => import("./components/About"));
 const Contact = lazy(() => import("./components/Contact"));
-const AppLayout = () => (
-  <>
-    <Header />
-    <Outlet />
-    <Footer />
-  </>
-);
+
+const AppLayout = () => {
+  const [user, setUser] = useState({
+    name: "Bhavesh",
+    email: "BhaveshBhanusali1@gmail.com",
+  });
+  return (
+    <UserContext.Provider value={{ user: user, setUser }}>
+      <Header />
+      <Outlet />
+      <Footer />
+    </UserContext.Provider>
+  );
+};
 
 const appRouter = createBrowserRouter([
   {
