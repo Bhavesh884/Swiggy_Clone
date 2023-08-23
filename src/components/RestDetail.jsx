@@ -29,7 +29,7 @@ const RestDetail = () => {
             src={IMG_CDN + restaurant?.logo}
             alt=""
           />
-          <h1 className="mx-4 font-bold text-3xl">{restaurant?.name}</h1>
+          <h1 className="mx-4 font-bold text-2xl w-96">{restaurant?.name}</h1>
         </div>
         <div className="flex flex-col mx-5 ">
           <h1 className="font-bold text-2xl my-3">

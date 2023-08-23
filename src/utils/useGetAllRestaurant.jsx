@@ -20,7 +20,11 @@ const useGetAllRestaurant = () => {
       json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
   }
-  const allData = { allRestaurants, filteredrestaurants };
+  const allData = {
+    allRestaurants,
+    filteredrestaurants,
+    setFilteredrestaurants,
+  };
   return allData;
 };
 

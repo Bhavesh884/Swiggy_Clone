@@ -8,7 +8,8 @@ import useOnline from "../utils/useOnline.jsx";
 
 export default Body = () => {
   const [searchtext, setsearchtext] = useState("");
-  const { allRestaurants, filteredrestaurants } = useGetAllRestaurant();
+  const { allRestaurants, filteredrestaurants, setFilteredrestaurants } =
+    useGetAllRestaurant();
 
   const isOnline = useOnline();
   if (!isOnline) {
@@ -27,7 +28,7 @@ export default Body = () => {
     <Shimmer />
   ) : (
     <>
-      <div className="p-5 my-3 bg-pink-50">
+      <div className="p-5 my-3 bg-pink-50 rounded-3xl shadow-2xl">
         <input
           type="text"
           className="shadow-xl rounded-full p-3 w-80 focus:bg-green-50"
