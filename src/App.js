@@ -10,6 +10,8 @@ import RestDetail from "./components/RestDetail";
 import Profile from "./components/Profile.jsx";
 import Shimmer from "./components/Shimmer";
 import UserContext from "./utils/UserContext";
+import { Provider } from "react-redux";
+import Store from "./utils/store";
 
 const InstaMart = lazy(() => import("./components/InstaMart"));
 const About = lazy(() => import("./components/About"));
@@ -21,11 +23,13 @@ const AppLayout = () => {
     email: "BhaveshBhanusali1@gmail.com",
   });
   return (
-    <UserContext.Provider value={{ user: user, setUser }}>
-      <Header />
-      <Outlet />
-      <Footer />
-    </UserContext.Provider>
+    <Provider store={Store}>
+      <UserContext.Provider value={{ user: user, setUser }}>
+        <Header />
+        <Outlet />
+        <Footer />
+      </UserContext.Provider>
+    </Provider>
   );
 };
 
@@ -88,5 +92,4 @@ const appRouter = createBrowserRouter([
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-// root.render(<Error />);
 root.render(<RouterProvider router={appRouter} />);

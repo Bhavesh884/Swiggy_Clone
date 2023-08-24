@@ -6,12 +6,18 @@ import "../../index.css";
 import useRestaurant from "../utils/useRestaurant";
 import useOnline from "../utils/useOnline";
 import { filterMenu } from "../utils/helper";
+import { addItem } from "../utils/cartSlice";
+import { useDispatch } from "react-redux";
 
 const RestDetail = () => {
   const { id } = useParams();
   const { restaurant, menuList, setMenuList, allMenuList } = useRestaurant(id);
   const isOnline = useOnline();
   const [searchtext, setsearchtext] = useState("");
+  const dispatch = useDispatch();
+  const handleAddItems = () => {
+    dispatch(addItem("grapes"));
+  };
   if (!isOnline) {
     return (
       <>
@@ -62,15 +68,23 @@ const RestDetail = () => {
               menuList.map((item) => {
                 return (
                   <li
-                    className="m-4 bg-green-50 w-96"
+                    className="m-4 bg-blue-50 w-96"
                     key={item?.card?.info?.id}
                   >
-                    <h3>
-                      {item?.card?.info?.name +
-                        " - " +
-                        item?.card?.info?.price / 100 +
-                        " RS. "}
-                    </h3>
+                    <div className="flex justify-between">
+                      <h3>
+                        {item?.card?.info?.name +
+                          " - " +
+                          item?.card?.info?.price / 100 +
+                          " RS. "}
+                      </h3>
+                      <button
+                        className="p-2 m-3 bg-green-100"
+                        onClick={() => handleAddItems()}
+                      >
+                        Add
+                      </button>
+                    </div>
                   </li>
                 );
               })
