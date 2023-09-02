@@ -15,8 +15,8 @@ const RestDetail = () => {
   const isOnline = useOnline();
   const [searchtext, setsearchtext] = useState("");
   const dispatch = useDispatch();
-  const handleAddItems = () => {
-    dispatch(addItem("grapes"));
+  const handleAddItems = (item) => {
+    dispatch(addItem(item));
   };
   if (!isOnline) {
     return (
@@ -80,7 +80,7 @@ const RestDetail = () => {
                       </h3>
                       <button
                         className="p-2 m-3 bg-green-100"
-                        onClick={() => handleAddItems()}
+                        onClick={() => handleAddItems(item)}
                       >
                         Add
                       </button>

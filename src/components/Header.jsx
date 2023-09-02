@@ -18,6 +18,7 @@ const Header = () => {
   const isOnline = useOnline();
   const { user } = useContext(UserContext);
   const cartItems = useSelector((Store) => Store.cart.items);
+  console.log(cartItems);
   return (
     <div className="flex justify-between bg-pink-50 shadow-xl">
       <Title />
@@ -36,7 +37,9 @@ const Header = () => {
           <li className="px-3">
             <Link to="/instamart">InstaMart</Link>
           </li>
-          <li className="px-3">Cart-{cartItems.length}-Items</li>
+          <li className="px-3">
+            <Link to="/cart">Cart-{cartItems.length}-Items</Link>
+          </li>
         </ul>
       </div>
       <div className="flex">
