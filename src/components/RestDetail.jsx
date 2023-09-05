@@ -75,7 +75,7 @@ const RestDetail = () => {
                       <h3>
                         {item?.card?.info?.name +
                           " - " +
-                          item?.card?.info?.price / 100 +
+                          Math.ceil(item?.card?.info?.price / 100) +
                           " RS. "}
                       </h3>
                       <button
